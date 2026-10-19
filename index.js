@@ -41,7 +41,7 @@ async function translateBatch(batch, targetLangCode, apiKey, batchNumber, totalB
     console.log(`[${targetLangCode.toUpperCase()}] [Batch ${batchNumber}/${totalBatches}] Translating ${batch.length} strings...`);
 
     const response = await axios.post(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`,
       {
         contents: [
           {
